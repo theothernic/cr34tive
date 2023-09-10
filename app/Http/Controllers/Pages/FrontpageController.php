@@ -11,7 +11,7 @@
         public function __invoke(): View
         {
             $page = new ContentPageViewModel([
-                'title' => 'Welcome'
+                'title' => 'Welcome',
             ]);
 
             return $this->respondWithView('pages.frontpage', $page);

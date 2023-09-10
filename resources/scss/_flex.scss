@@ -5,3 +5,17 @@
 .flex.col {
     flex-direction: column;
 }
+
+
+.columns {
+    display: flex;
+    display: flex;
+    width: 100%;
+
+    flex-direction: row;
+    gap: 1rem;
+
+    .col {
+        flex: 1;
+    }
+}

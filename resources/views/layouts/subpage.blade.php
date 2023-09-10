@@ -36,12 +36,16 @@
 
     <footer id="colophon">
         <div class="col">
-            <div class="brand"></div>
 
-            <p>
-                &copy; 2023- <a href="{{ $page->nav['author'] ?? '#' }}">Nic Barr</a>.
-                All rights reserved. <a href="{{ route('pages.credits') }}">Credits</a>
-            </p>
+            <div class="site">
+                <div class="brand"></div>
+
+                <p>
+                    Made with <span class="heart">&hearts;</span> by <a href="{{ $page->nav['author'] ?? '#' }}">Nic Barr</a>.
+                    &copy; {{ date('Y') }} All rights reserved. <a href="{{ route('pages.credits') }}">Credits</a>
+                </p>
+            </div>
+
         </div>
 
         <div class="col">

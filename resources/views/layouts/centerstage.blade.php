@@ -9,10 +9,6 @@
 
 
     @vite(['resources/js/web.js'])
-
-    <style type="text/css">
-
-    </style>
 </head>
 <body>
     <main class="centerstage">
