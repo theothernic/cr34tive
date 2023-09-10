@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa322c53454393ed775cfe4807d54a50",
+    "content-hash": "492324c730e4d7ef53b3894d10b0b62a",
     "packages": [
         {
             "name": "brick/math",
@@ -5345,6 +5345,63 @@
             "time": "2023-08-24T14:51:05+00:00"
         },
         {
+            "name": "theothernic/datamodels",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:theothernic/datamodels.git",
+                "reference": "3bb21917fb188994b66ae1cd9276143aa9cb4930"
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Theothernic\\Datamodels\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Nic Barr",
+                    "email": "code@nicholasbarr.net"
+                }
+            ],
+            "time": "2023-09-02T10:39:17+00:00"
+        },
+        {
+            "name": "theothernic/laravel-traits",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:theothernic/laravel-traits.git",
+                "reference": "222c05f7d6f2dbbab5a13ad741de6c98f16c3140"
+            },
+            "require": {
+                "illuminate/database": "^10.22",
+                "illuminate/http": "^10.22",
+                "illuminate/support": "^10.22",
+                "illuminate/view": "^10.22",
+                "php": "^8.1",
+                "theothernic/datamodels": "dev-main"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Theothernic\\LaravelTraits\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Nic Barr",
+                    "email": "code@nicholasbarr.net"
+                }
+            ],
+            "time": "2023-09-06T10:33:44+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.6",
             "source": {
@@ -8053,7 +8110,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "theothernic/datamodels": 20,
+        "theothernic/laravel-traits": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

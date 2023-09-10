@@ -12,27 +12,35 @@
 <body>
 <div class="ct flex col">
     <header id="masthead">
-        <div class="brand noodles"></div>
+
+        @if (isset($page->subBrand))
+        <div class="brand {{ $page->subBrand }}">
+            <a href="{{ $page->nav['subbrand'] }}"></a>
+        </div>
+        @else
+        <h1 class="title">{{ $page->title }}</h1>
+        @endif
 
         <div class="brand">
-            <a href="#" class="home-link"></a>
+            <a href="{{ route('front') }}" class="home-link"></a>
         </div>
     </header>
 
 
     <main class="content">
-        <h1 class="title">The quick brown fox jumps over the lazy dog.</h1>
+        <h1 class="headliner">{{ (!empty($page->headline)) ? $page->headline : $page->title }}</h1>
 
 
-        The quick brown fox jumps over the lazy dog.
+        @yield('content')
     </main>
 
     <footer id="colophon">
         <div class="col">
-            <div id="brand">
+            <div class="brand"></div>
 
             <p>
-                &copy; 2023- <a href="#">Nic Barr</a>. All rights reserved. <a href="#">Credits</a>
+                &copy; 2023- <a href="{{ $page->nav['author'] ?? '#' }}">Nic Barr</a>.
+                All rights reserved. <a href="{{ route('pages.credits') }}">Credits</a>
             </p>
         </div>
 

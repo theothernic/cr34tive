@@ -18,7 +18,10 @@ main.centerstage {
     .frontpage {
         display: flex;
 
+        flex-direction: column;
+
         justify-content: center;
+        align-items: center;
 
         margin: 0 auto;
         width: calc(100vw - 40%);
@@ -29,13 +32,19 @@ main.centerstage {
         .brand {
             width: 25vw;
             height: 12rem;
+
+
+            &.small {
+                height: 4rem;
+                width: 4rem;
+            }
         }
     }
 
 }
 
 main.content {
-    .title {
+    .headliner {
         margin: 1rem 0 ;
         font-family: 'nitti-typewriter-cameo', sans-serif;
         font-size: 2.5rem;
@@ -81,7 +90,7 @@ main.content {
         }
     }
 
-    .home-link {
+    a {
         display: block;
         width: 100%;
         height: 100%;
@@ -89,6 +98,17 @@ main.content {
 
 }
 
+#colophon {
+    display: flex;
+
+    justify-content: space-between;
+    padding: 1rem;
+    background: #FAFAFA;
+}
+#colophon .brand {
+    margin: 1rem 0;
+    height: 48px;
+}
 
 .brand {
 

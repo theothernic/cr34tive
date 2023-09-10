@@ -13,7 +13,13 @@
 
         public function __invoke(): View
         {
-            $page = new IndexPageViewModel();
+            $page = new IndexPageViewModel([
+                'title' => 'A bit country, a bit rock-and-roll',
+                'nav' => [
+                    'home' => route('front'),
+                    'subbrand' => route('noodles.index')
+                ]
+            ]);
 
             return $this->respondWithView('noodles.index', $page);
         }
