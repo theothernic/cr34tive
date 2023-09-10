@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+include_once 'web-noodles.php';
+
+Route::get('/', \App\Http\Controllers\Pages\FrontpageController::class)->name('front');
