@@ -11,11 +11,14 @@
         use HasUuids, SoftDeletes;
         use Sluggable;
 
+        protected $table = 'stationery_collections';
+
         protected $fillable = [
             'maker_id',
             'type',
             'slug',
-            'title'
+            'title',
+            'description'
         ];
 
 
