@@ -20,8 +20,20 @@
             'title'
         ];
 
-        public function asDto()
+        public function getDetailUrl()
         {
-            return new MakerDto($this->getAttributes());
+            return route('stationery.maker', ['slug'=> $this->slug]);
+        }
+
+        public function asDto(): MakerDto
+        {
+            return new MakerDto(
+                array_merge(
+                    $this->getAttributes(),
+                    [
+                        'url' => $this->getDetailUrl()
+                    ]
+                )
+            );
         }
     }

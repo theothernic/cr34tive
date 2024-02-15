@@ -13,7 +13,7 @@
         public function allAsDtos()
         {
             $data = collect();
-            $models = $this->all();
+            $models = Maker::orderBy('title', 'asc')->get();
 
             foreach ($models as $model)
                 $data->push($model->asDto());

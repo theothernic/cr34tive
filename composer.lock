@@ -37,7 +37,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:bearlovescode/laravel-traits.git",
-                "reference": "2e91c673ba3b90eddf9285c5077469b13c962d1b"
+                "reference": "d3c15c65a78b624cc9536659af5ecd0ead645510"
             },
             "require": {
                 "bearlovescode/datamodels": "^1.1",
@@ -60,7 +60,7 @@
                     "email": "code@nicholasbarr.net"
                 }
             ],
-            "time": "2024-02-15T04:08:25+00:00"
+            "time": "2024-02-15T04:47:55+00:00"
         },
         {
             "name": "brick/math",

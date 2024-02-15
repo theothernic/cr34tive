@@ -7,5 +7,6 @@
         public string $id;
         public string $slug;
         public string $title;
+        public string $url;
     }
 
