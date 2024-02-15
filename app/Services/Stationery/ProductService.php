@@ -1,6 +1,7 @@
 <?php
     namespace App\Services\Stationery;
 
+    use App\Models\Dtos\Stationery\ProductDto;
     use App\Models\Stationery\Product;
     use Illuminate\Support\Collection;
 
@@ -15,5 +16,11 @@
                 $data->push($model->asDto());
 
             return $data;
+        }
+
+
+        public function getAsDto(string $id): ProductDto
+        {
+            return Product::findOrFail($id)->asDto();
         }
     }

@@ -1,9 +1,10 @@
 <?php
     namespace App\Http\Controllers\Pages;
 
+    use App\Http\Controllers\ViewController;
     use App\View\Models\Pages\ContentPageViewModel;
 
-    class PageController
+    class PageController extends ViewController
     {
 
         public function credits()

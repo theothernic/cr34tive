@@ -1,16 +1,13 @@
 <?php
     namespace App\Http\Controllers\Noodles;
 
+    use App\Http\Controllers\ViewController;
     use App\View\Models\Noodles\IndexPageViewModel;
     use Illuminate\View\View;
-    use Bearlovescode\LaravelTraits\Controllers\JsonController;
-    use Bearlovescode\LaravelTraits\Controllers\ViewController;
 
-    class IndexController
+
+    class IndexController extends ViewController
     {
-        use ViewController;
-        use JsonController;
-
         public function __invoke(): View
         {
             $page = new IndexPageViewModel([

@@ -1,29 +1,28 @@
 <?php
     namespace App\Http\Controllers\Stationery;
 
+    use App\Http\Controllers\ApiController;
     use App\Http\Controllers\Controller;
-    use App\Services\Stationery\MakerService;
     use App\Services\Stationery\ProductService;
     use Illuminate\Http\JsonResponse;
 
-    class ApiResourceController extends Controller
+    class ProductsApiResourceController extends ApiController
     {
         public function __construct(
-            private readonly MakerService $makerService,
             private readonly ProductService $productService
         )
         {
         }
-        public function makers(): JsonResponse
-        {
-            $data = $this->makerService->allAsDtos();
 
+        public function index(): JsonResponse
+        {
+            $data = $this->productService->allAsDtos();
             return $this->respondWithJson($data);
         }
 
-        public function products(): JsonResponse
+        public function detail(string $id): JsonResponse
         {
-            $data = $this->productService->allAsDtos();
+            $data = $this->productService->getAsDto($id);
             return $this->respondWithJson($data);
         }
     }

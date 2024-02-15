@@ -2,10 +2,11 @@
     namespace App\Http\Controllers\Stationery;
 
     use App\Http\Controllers\Controller;
+    use App\Http\Controllers\ViewController;
     use App\View\Models\Stationery\IndexPageViewModel;
 
 
-    class IndexController extends Controller
+    class IndexController extends ViewController
     {
         public function __invoke()
         {

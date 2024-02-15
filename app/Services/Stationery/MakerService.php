@@ -1,6 +1,7 @@
 <?php
     namespace App\Services\Stationery;
 
+    use App\Models\Dtos\Stationery\MakerDto;
     use App\Models\Stationery\Maker;
     use Illuminate\Support\Collection;
 
@@ -20,5 +21,10 @@
                 $data->push($model->asDto());
 
             return $data;
+        }
+
+        public function getAsDto(string $id): MakerDto
+        {
+            return Maker::findOrFail($id)->asDto();
         }
     }
