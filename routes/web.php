@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 include_once 'web-pages.php';
 include_once 'web-noodles.php';
+include_once 'web-stationery.php';
 
 Route::get('/', \App\Http\Controllers\Pages\FrontpageController::class)->name('front');

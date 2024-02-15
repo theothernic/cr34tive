@@ -14,7 +14,7 @@
     <header id="masthead">
 
         @if (isset($page->subBrand))
-        <div class="brand {{ $page->subBrand }}">
+        <div class="subbrand {{ $page->subBrand }}">
             <a href="{{ $page->nav['subbrand'] }}"></a>
         </div>
         @else

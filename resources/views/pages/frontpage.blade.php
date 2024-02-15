@@ -7,8 +7,6 @@
 
         <div class="columns">
             <div class="col">
-
-
                 <div class="site">
                     <div class="brand noodles small">
                         <a class="brand-link" href="{{ route('noodles.index') }}"></a>
@@ -22,9 +20,15 @@
             </div>
 
             <div class="col">
-               <div class="box">
-                   &nbsp;
-               </div>
+                <div class="site">
+                    <div class="brand stationery small">
+                        <a class="brand-link" href="{{ route('stationery.index') }}"></a>
+                    </div>
+
+                    <p class="description">
+                        A database of stationery I've collected.
+                    </p>
+                </div>
             </div>
         </div>
 
