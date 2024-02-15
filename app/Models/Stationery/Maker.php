@@ -2,6 +2,7 @@
     namespace App\Models\Stationery;
 
     use App\Concerns\Eloquent\Sluggable;
+    use App\Models\Dtos\Stationery\MakerDto;
     use Illuminate\Database\Eloquent\Concerns\HasUuids;
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\SoftDeletes;
@@ -18,4 +19,9 @@
             'slug',
             'title'
         ];
+
+        public function asDto()
+        {
+            return new MakerDto($this->getAttributes());
+        }
     }

@@ -13,7 +13,7 @@
         }
 
 
-        public function index()
+        public function makers()
         {
             $data = $this->makerService->allAsDtos();
 

@@ -11,7 +11,7 @@
         {
             static::creating(function (Model $model) {
                 if (empty($model->slug))
-                    $this->slug = Str::slug($model->title);
+                    $model->slug = Str::slug($model->title);
             });
         }
     }
