@@ -50,6 +50,10 @@
 
         public function getFullTitle()
         {
+
+            if ($this->collection)
+                return sprintf('%s %s %s', $this->maker->title, $this->collection->title, $this->title);
+
             return sprintf('%s %s', $this->maker->title, $this->title);
         }
 
