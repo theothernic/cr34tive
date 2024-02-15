@@ -34,7 +34,6 @@
         {
             return Product::where('type', $type)
                 ->orderBy('created_at', 'desc')
-                ->orderBy('title', 'asc')
                 ->take($results)
                 ->get();
         }
