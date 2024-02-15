@@ -1,7 +1,7 @@
 <?php
     namespace App\Http\Controllers\Stationery;
 
-    class MakerController
+    class MakerDetailController
     {
         public function __invoke(string $slug)
         {

@@ -1,20 +1,15 @@
 <?php
     namespace App\Services\Stationery;
 
-    use App\Models\Stationery\Maker;
+    use App\Models\Stationery\Product;
     use Illuminate\Support\Collection;
 
-    class MakerService
+    class ProductService
     {
-        public function all()
-        {
-            return Maker::all();
-        }
-
         public function allAsDtos(): Collection
         {
             $data = collect();
-            $models = Maker::orderBy('title', 'asc')->get();
+            $models = Product::orderBy('title', 'asc')->get();
 
             foreach ($models as $model)
                 $data->push($model->asDto());

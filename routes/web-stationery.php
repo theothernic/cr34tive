@@ -4,5 +4,6 @@
 
     Route::name('stationery.')->prefix('stationery')->group(function () {
         Route::get('/', \App\Http\Controllers\Stationery\IndexController::class)->name('index');
-        Route::get('maker/{slug}', \App\Http\Controllers\Stationery\MakerController::class)->name('maker');
+        Route::get('maker/{slug}.html', \App\Http\Controllers\Stationery\MakerDetailController::class)->name('maker');
+        Route::get('product/{slug}.html', \App\Http\Controllers\Stationery\ProductDetailController::class)->name('product');
     });
