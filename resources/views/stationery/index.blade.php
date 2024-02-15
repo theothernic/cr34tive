@@ -12,7 +12,7 @@
                         <li class="pen"><a href="{{ $pen->url }}">{{ $pen->fullTitle }}</a></li>
                     @endforeach
                 @else
-                    <li class="empty">No inks available for display at the moment</li>
+                    <li class="empty">No pens available for display at the moment</li>
                 @endunless
             </ul>
         </section>
@@ -28,5 +28,10 @@
                 @endunless
             </ul>
         </section>
+    </div>
+
+    <div class="counts">
+        There are <strong><span class="pen-count">{{ $page->pens->count() }} pens</span></strong>,
+        <strong><span class="ink-count">{{ $page->inks->count() }} inks</span></strong> currently in the collection.
     </div>
 @endsection
