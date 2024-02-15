@@ -38,6 +38,11 @@
                 ->get();
         }
 
+        public function getTotalProductCountByType(string $type): int
+        {
+            return Product::where('type', $type)->count();
+        }
+
         public function getLatestProductsAsDto(string $type, int $results = 10): Collection
         {
             $records = collect();

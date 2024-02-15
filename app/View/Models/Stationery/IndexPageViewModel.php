@@ -8,4 +8,6 @@
     {
         public ?Collection $inks;
         public ?Collection $pens;
+        public int $totalInks;
+        public int $totalPens;
     }

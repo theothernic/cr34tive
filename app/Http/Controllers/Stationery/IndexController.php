@@ -21,7 +21,9 @@
                 'title' => 'Pen & Ink: Stationery DB',
                 'headline' => 'Today\'s Stationery Offerings',
                 'inks' => $this->productService->getLatestProductsAsDto('ink'),
+                'totalInks' => $this->productService->getTotalProductCountByType('ink'),
                 'pens' => $this->productService->getLatestProductsAsDto('pen'),
+                'totalPens' => $this->productService->getTotalProductCountByType('pen'),
                 'nav' => [
                     'home' => route('front'),
                     'subbrand' => route('stationery.index')

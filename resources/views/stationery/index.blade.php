@@ -31,7 +31,7 @@
     </div>
 
     <div class="counts">
-        There are <strong><span class="pen-count">{{ $page->pens->count() }} pens</span></strong>,
-        <strong><span class="ink-count">{{ $page->inks->count() }} inks</span></strong> currently in the collection.
+        There are <strong><span class="pen-count">{{ $page->totalPens }} pens</span></strong>,
+        <strong><span class="ink-count">{{ $page->totalInks }} inks</span></strong> currently in the collection.
     </div>
 @endsection
