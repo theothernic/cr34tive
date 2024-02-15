@@ -23,4 +23,35 @@
         {
             return Product::findOrFail($id)->asDto();
         }
+
+
+        public function findViaSlug(string $slug): Product
+        {
+            return Product::where('slug', $slug)->firstOrFail();
+        }
+
+        public function getLatestProducts(string $type, int $results = 10)
+        {
+            return Product::inks()
+                ->orderBy('created_at', 'desc')
+                ->orderBy('title', 'asc')
+                ->take($results)
+                ->get();
+        }
+
+        public function getLatestProductsAsDto(string $type, int $results = 10): Collection
+        {
+            $records = collect();
+            $data = $this->getLatestProducts($type, $results);
+
+            foreach ($data as $model)
+            {
+                $dto = $model->asDto();
+                $dto->title = $model->getFullTitle();
+                $records->push($dto);
+            }
+
+
+            return $records;
+        }
     }

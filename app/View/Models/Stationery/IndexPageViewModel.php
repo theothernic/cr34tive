@@ -2,8 +2,10 @@
     namespace App\View\Models\Stationery;
 
     use App\View\Models\Pages\PageViewModel;
+    use Illuminate\Support\Collection;
 
-    class IndexPageViewModel extends PageViewModel
+    class IndexPageViewModel extends StationeryPageViewModel
     {
-        public ?string $subBrand = 'stationery';
+        public ?Collection $inks;
+        public ?Collection $pens;
     }

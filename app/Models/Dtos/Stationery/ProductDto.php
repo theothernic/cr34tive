@@ -8,6 +8,7 @@
         public string $id;
         public string $slug;
         public string $title;
+        public string $fullTitle;
         public ?string $collection;
         public string $maker;
         public string $url;
