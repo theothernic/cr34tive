@@ -32,7 +32,7 @@
 
         public function getLatestProducts(string $type, int $results = 10)
         {
-            return Product::inks()
+            return Product::where('type', $type)
                 ->orderBy('created_at', 'desc')
                 ->orderBy('title', 'asc')
                 ->take($results)

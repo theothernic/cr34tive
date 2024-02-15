@@ -20,7 +20,8 @@
             $page = new IndexPageViewModel([
                 'title' => 'Pen & Ink: Stationery DB',
                 'headline' => 'Today\'s Stationery Offerings',
-                'inks' => $this->productService->getLatestProductsAsDto('inks'),
+                'inks' => $this->productService->getLatestProductsAsDto('ink'),
+                'pens' => $this->productService->getLatestProductsAsDto('pen'),
                 'nav' => [
                     'home' => route('front'),
                     'subbrand' => route('stationery.index')
