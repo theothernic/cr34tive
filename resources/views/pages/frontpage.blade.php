@@ -32,6 +32,9 @@
             </div>
         </div>
 
-        <div class="copyleft">Made with <span class="heart">&hearts;</span> by Nic Barr. &copy; {{ date('Y') }}. All rights reserved.</div>
+        <p>
+            Made with <span class="heart">&hearts;</span> by <a href="{{ $page->nav['author'] ?? '#' }}">Nic Barr</a>.
+            &copy; {{ date('Y') }} All rights reserved. <a href="{{ route('pages.credits') }}">Credits</a>
+        </p>
     </div>
 @endsection

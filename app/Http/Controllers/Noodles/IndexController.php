@@ -3,8 +3,8 @@
 
     use App\View\Models\Noodles\IndexPageViewModel;
     use Illuminate\View\View;
-    use Theothernic\LaravelTraits\Controllers\JsonController;
-    use Theothernic\LaravelTraits\Controllers\ViewController;
+    use Bearlovescode\LaravelTraits\Controllers\JsonController;
+    use Bearlovescode\LaravelTraits\Controllers\ViewController;
 
     class IndexController
     {
@@ -14,7 +14,8 @@
         public function __invoke(): View
         {
             $page = new IndexPageViewModel([
-                'title' => 'A bit country, a bit rock-and-roll',
+                'title' => 'Noodles',
+                'headline' => 'A bit country, a bit rock-and-roll',
                 'nav' => [
                     'home' => route('front'),
                     'subbrand' => route('noodles.index')

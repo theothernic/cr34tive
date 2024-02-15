@@ -2,11 +2,9 @@
     namespace App\Http\Controllers\Pages;
 
     use App\View\Models\Pages\ContentPageViewModel;
-    use Theothernic\LaravelTraits\Controllers\ViewController;
 
     class PageController
     {
-        use ViewController;
 
         public function credits()
         {

@@ -1,5 +1,30 @@
 .flex {
     display: flex;
+
+    .flex-1,
+    .one {
+        flex: 1;
+    }
+
+    .flex-2,
+    .two {
+        flex: 2;
+    }
+
+    .flex-3,
+    .three {
+        flex: 3;
+    }
+
+    .flex-4,
+    .four
+    {
+        flex: 4;
+    }
+
+    .flex-5 {
+        flex: 5;
+    }
 }
 
 .flex.col {
@@ -8,7 +33,6 @@
 
 
 .columns {
-    display: flex;
     display: flex;
     width: 100%;
 

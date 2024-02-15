@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('page.title') :: {{ config('app.name') }}</title>
+    <title>@yield('title') :: {{ config('app.name') }}</title>
 
     @vite(['resources/js/web.js'])
 </head>
@@ -28,7 +28,7 @@
 
 
     <main class="content">
-        <h1 class="headliner">{{ (!empty($page->headline)) ? $page->headline : $page->title }}</h1>
+        <h1 class="headline">{{ (!empty($page->headline)) ? $page->headline : $page->title }}</h1>
 
 
         @yield('content')

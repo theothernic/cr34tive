@@ -1,10 +1,10 @@
 {
     "name": "theothernic/cr34tive",
     "type": "project",
-    "description": "Musical content management built upon the Laravel framework.",
+    "description": "Creative content management built upon the Laravel framework.",
     "repositories": [
-        { "type":  "git", "url": "git@github.com:theothernic/datamodels.git"},
-        { "type":  "git", "url": "git@github.com:theothernic/laravel-traits.git"}
+        { "type":  "git", "url": "git@github.com:bearlovescode/datamodels.git"},
+        { "type":  "git", "url": "git@github.com:bearlovescode/laravel-traits.git"}
     ],
     "license": "MIT",
     "require": {
@@ -13,8 +13,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "theothernic/datamodels": "dev-main",
-        "theothernic/laravel-traits": "dev-main"
+        "bearlovescode/datamodels": "^1.1",
+        "bearlovescode/laravel-traits": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

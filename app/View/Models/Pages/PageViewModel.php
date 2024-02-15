@@ -1,7 +1,7 @@
 <?php
     namespace App\View\Models\Pages;
 
-    use Theothernic\Datamodels\View\PageViewModel as BasePageViewModel;
+    use Bearlovescode\Datamodels\View\PageViewModel as BasePageViewModel;
 
     class PageViewModel extends BasePageViewModel
     {
