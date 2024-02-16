@@ -18,8 +18,8 @@
             $record = $this->productService->findViaSlug($slug);
 
             $page = new DetailPageViewModel([
-                'title' => sprintf('%s %s', $record->maker->title, $record->title),
-                'headline' => sprintf('%s %s', $record->maker->title, $record->title),
+                'title' => sprintf('Ink: %s', $record->getFullTitle()),
+                'headline' => $record->getFullTitle(),
                 'nav' => [
                     'home' => route('front'),
                     'subbrand' => route('stationery.index')

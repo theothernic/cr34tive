@@ -58,4 +58,15 @@
 
             return $records;
         }
+
+        public function getByTypeAsDto(string $type): Collection
+        {
+            $data = Product::where('type', $type)->orderBy('title', 'asc')->get();
+            $records = collect();
+
+            foreach($data as $r)
+                $records->push($r->asDto());
+
+            return $records;
+        }
     }
