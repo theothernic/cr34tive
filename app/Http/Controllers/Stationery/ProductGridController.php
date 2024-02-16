@@ -15,9 +15,14 @@
 
         public function __invoke(string $type)
         {
+            $records = $this->productService->getByTypeAsDto($type);
+
+            if ($records->isEmpty())
+                abort(404);
+
             $page = new ListViewPageModel([
                 'title' => sprintf('Products: %s', ucwords($type)),
-                'records' => $this->productService->getByTypeAsDto($type),
+                'records' => $records
             ]);
 
             return $this->respondWithView('stationery.grid', $page);

@@ -8,7 +8,7 @@
 
     <section class="grid">
         @foreach($page->records as $record)
-        @include('components.card', ['body' => sprintf('<a href="%s">%s</a>', $record->url, $record->title)])
+        @include('components.card', ['body' => sprintf('<a href="%s">%s</a>', $record->url, $record->fullTitle)])
         @endforeach
     </section>
 

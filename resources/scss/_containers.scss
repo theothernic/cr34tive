@@ -5,7 +5,11 @@
 }
 
 .grid {
-    display: flex;
-    flex-grow: 1;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .card {
+        min-height: 5rem;
+        flex: 1; // minimum flex.
+    }
 }

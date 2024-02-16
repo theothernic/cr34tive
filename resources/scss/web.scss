@@ -67,6 +67,8 @@ main.centerstage {
 }
 
 main.content {
+    flex: 1;
+
     .headline {
         margin: 1rem 0 ;
         font-family: 'nitti-typewriter-cameo', sans-serif;
