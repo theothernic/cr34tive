@@ -111,6 +111,12 @@ main.content {
         flex: 1;
         margin: 1rem 0;
         height: 48px;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .brand {
@@ -160,12 +166,6 @@ main.content {
 
     &.stationery {
         background-image: url('../img/stationery-logo.png');
-    }
-
-    a {
-        display: block;
-        width: 100%;
-        height: 100%;
     }
 }
 
